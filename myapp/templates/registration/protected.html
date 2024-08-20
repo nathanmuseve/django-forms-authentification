@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+
+
+{% block title %}
+Protected Page
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <h2>  This page is protected from anuthorized users.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam sunt quae modi harum tempora, magnam obcaecati ducimus laudantium assumenda nostrum distinctio? Asperiores soluta laudantium impedit enim ex temporibus praesentium!</p>
+    <a href="{% url 'home' %}">Return to home page</a>
+  </div>
+{% endblock content %}
+  
+  

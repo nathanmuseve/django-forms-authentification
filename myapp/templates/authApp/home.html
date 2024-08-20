@@ -1,0 +1,22 @@
+{% extends 'master.html' %}
+
+
+{% block title %}
+  Home Page
+{% endblock title %}
+  
+
+{% block content %}
+  <div class="container">
+    <h2>Django Home Page</h2>
+    <p>Welcome, {{ request.user.username }} </p>
+    <a href="{% url 'protected' %}">Go to the Protected Page!</a>
+
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn">Logout</button>
+
+    </form>
+  </div>
+{% endblock content %}
+  
